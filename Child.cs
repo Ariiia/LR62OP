@@ -6,19 +6,26 @@ namespace LR62OP
 {
     class Child
     {
-        int days;
+        
      public int[] DayNumber;
-    public    string Attend;
+    public    string[] Attend;
 
 
-     public   Child(int days, int[] DayNumber,  string Attend)
+     public   Child( int days)
         {
-            for(int i=0; i<days; i++)
+            this.DayNumber = new int[days];
+            this.Attend = new string[days];
+            string[] ChooseFrom = { "+", "-" };
+            string AttendBool;
+            Random rand = new Random();
+            AttendBool = Convert.ToString(rand.Next(ChooseFrom.Length));
+               
+           
+            for (int i=0; i<days; i++)
             {
-                DayNumber[i] = i + 1;
+                this.DayNumber = i + 1;
 
             }
-                this.Attend = Attend;
         }
     }
 }
