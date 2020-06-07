@@ -1,0 +1,11 @@
+C:\Users\koala\Source\Repos\LR62OP\bin\Debug\netcoreapp3.0\LR62OP.exe
+C:\Users\koala\Source\Repos\LR62OP\bin\Debug\netcoreapp3.0\LR62OP.deps.json
+C:\Users\koala\Source\Repos\LR62OP\bin\Debug\netcoreapp3.0\LR62OP.runtimeconfig.json
+C:\Users\koala\Source\Repos\LR62OP\bin\Debug\netcoreapp3.0\LR62OP.runtimeconfig.dev.json
+C:\Users\koala\Source\Repos\LR62OP\bin\Debug\netcoreapp3.0\LR62OP.dll
+C:\Users\koala\Source\Repos\LR62OP\bin\Debug\netcoreapp3.0\LR62OP.pdb
+C:\Users\koala\Source\Repos\LR62OP\obj\Debug\netcoreapp3.0\LR62OP.csprojAssemblyReference.cache
+C:\Users\koala\Source\Repos\LR62OP\obj\Debug\netcoreapp3.0\LR62OP.AssemblyInfoInputs.cache
+C:\Users\koala\Source\Repos\LR62OP\obj\Debug\netcoreapp3.0\LR62OP.AssemblyInfo.cs
+C:\Users\koala\Source\Repos\LR62OP\obj\Debug\netcoreapp3.0\LR62OP.dll
+C:\Users\koala\Source\Repos\LR62OP\obj\Debug\netcoreapp3.0\LR62OP.pdb
