@@ -61,6 +61,10 @@ namespace LR62OP
 
                         if ((children.Attend[i-2]=="-")&&( children.Attend[i - 1]=="-")&& (children.Attend[i] == "-")&& (children.Attend[i - 3] == "-")){
                             children.needReceipt = true;
+                            while (children.Attend[i] == "-")
+                            {
+                                i++;
+                            }
                             
                     }
 
