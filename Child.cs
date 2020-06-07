@@ -10,7 +10,7 @@ namespace LR62OP
     {
         public int UnPaidDays = 0;
         public bool needReceipt;
-        public static List<Child> MyBoys { get; set; } = new List<Child>();
+        public static Collect<Child> MyBoys { get; set; } = new Collect<Child>();
         public static int Days;
         public int[] DayNumber;
         public string[] Attend;

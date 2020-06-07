@@ -6,12 +6,15 @@ namespace LR62OP
 {
     public class Nurse
     {
-        public static Collect<Child> ChildCollectNu =new Collect<Child>(Child.MyBoys);
+        public static Collect<Child> ChildCollectNu=new Collect<Child>();
        public Nurse()
         {
-            ChildCollectNu.InfoOnChildren = Child.MyBoys;
+            ChildCollectNu = Child.MyBoys;
+           
         }
 
+
+      
         public static void Check()
         {
             if (ChildCollectNu.InfoOnChildren.Count == 0)
@@ -26,7 +29,7 @@ namespace LR62OP
             }
             else
             {
-                foreach (var children in Child.MyBoys)
+                foreach (Child children in Child.MyBoys)
                 {
 
                     for (int i = 3; i < Child.Days; i++)
@@ -35,25 +38,25 @@ namespace LR62OP
                         {
 
                             children.needReceipt = ((new Random()).Next(2) == 0) ? true : false;
-                            children.Attend[i] = ((children.needReceipt) == false) ? "+" : "- GO TO NURSE";
+                            children.Attend[i] = ((children.needReceipt) == false) ? "+" : "- GO TO NURSE TAKE RECEIPT";
                             continue;
                         }
 
                         if ((children.Attend[i - 2] == "-") && (children.Attend[i - 1] == "-") && (children.Attend[i] == "-") && (children.Attend[i - 3] == "-"))
-                        { children.Attend[i - 2] = "- GO TO NURSE";
-                            children.Attend[i - 1] = "- GO TO NURSE";
-                            children.Attend[i] = "- GO TO NURSE";
-                            children.Attend[i - 3] = "- GO TO NURSE";
+                        { children.Attend[i - 2] = "- GO TO NURSE TAKE RECEIPT";
+                            children.Attend[i - 1] = "- GO TO NURSE TAKE RECEIPT";
+                            children.Attend[i] = "- GO TO NURSE TAKE RECEIPT";
+                            children.Attend[i - 3] = "- GO TO NURSE TAKE RECEIPT";
                             children.needReceipt = true;
                             while (children.Attend[i] == "-")
                             {
-                                children.Attend[i] = "- GO TO NURSE";
+                                children.Attend[i] = "- GO TO NURSE TAKE RECEIPT";
                                 i++;
                             }
                          
 
                                 children.needReceipt = ((new Random()).Next(2) == 0) ? true : false;
-                                children.Attend[i] =  "- GO TO NURSE";
+                                children.Attend[i] =  "- GO TO NURSE TAKE RECEIPT";
                                 continue;
                             
                         }
@@ -61,7 +64,7 @@ namespace LR62OP
                     }
                 }
 
-            }
+            } 
         }
 
     }

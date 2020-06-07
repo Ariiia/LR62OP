@@ -25,6 +25,7 @@ namespace LR62OP
             }
 
             //OUTPUT
+            Console.WriteLine("\nLIST OF CHILDREN\n");
             for (int i = 0; i < ChildSize; i++)
             {
                 Console.WriteLine("\nChild #\t" + (i + 1) + ":\n");
@@ -35,6 +36,7 @@ namespace LR62OP
             Headmisstress headmisstress = new Headmisstress();
             Nurse.Check();
             Headmisstress.ReceiptForParents();
+            Console.WriteLine("\nLIST OF CHILDREN\n");
 
             for (int i = 0; i < ChildSize; i++)
             {
