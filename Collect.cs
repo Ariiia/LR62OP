@@ -4,8 +4,13 @@ using System.Text;
 
 namespace LR62OP
 {
-    class Collect<T>
+    public class Collect<T>
     {
-        List<T> InfoOnChildren;
+       public List<T> InfoOnChildren { get; }
+        public Collect(List<T> Info)
+        {
+            InfoOnChildren = Info;
+        }
     }
+
 }

@@ -13,25 +13,35 @@ namespace LR62OP
             Console.WriteLine("\tWELCOME TO KINDERGARDEN");
             Console.WriteLine("\tWOOBYY-BOO");
             Console.WriteLine("Please Enter number of children");
+            int ChildSize = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("days?");
+            int days  =Convert.ToInt32(Console.ReadLine());//number of days in kindergarden
             
-            int days = 62;//number of days in kindergarden
-            int ChildSize = 3;// Convert.ToInt32(Console.ReadLine());
-      Child[] children = new Child[ChildSize];//array of children
+            Child[] children = new Child[ChildSize];//array of children
 
-            for (int i = 0; i < ChildSize; i++)
-            { 
-                    children[i] = new Child(days);
-             }
-
-            //OUTPUT
-        //    Nurse Nurse = new Nurse(Child.MyBoys);
             for (int i = 0; i < ChildSize; i++)
             {
-                Console.WriteLine("\nChild #\t" + (i + 1)+":\n");
-                children[i].Output(days);
-              
+                children[i] = new Child(days);
             }
 
+            //OUTPUT
+            //    Nurse Nurse = new Nurse(Child.MyBoys);
+            for (int i = 0; i < ChildSize; i++)
+            {
+                Console.WriteLine("\nChild #\t" + (i + 1) + ":\n");
+                children[i].Output(days);
+
+            }
+
+            Nurse.Check();
+            Headmisstress.ReceiptForParents();
+
+            for (int i = 0; i < ChildSize; i++)
+            {
+                Console.WriteLine("\nChild #\t" + (i + 1) + ":\n");
+                children[i].Output(days);
+
+            }
 
         }
     }

@@ -7,7 +7,7 @@ namespace LR62OP
     public class Nurse
     {
 
-   
+
 
         public static void Check()
         {
@@ -32,18 +32,27 @@ namespace LR62OP
                         {
 
                             children.needReceipt = ((new Random()).Next(2) == 0) ? true : false;
-                            children.Attend[i] = ((children.needReceipt) == false) ? "+" : "-";
+                            children.Attend[i] = ((children.needReceipt) == false) ? "+" : "- GO TO NURSE";
                             continue;
                         }
 
                         if ((children.Attend[i - 2] == "-") && (children.Attend[i - 1] == "-") && (children.Attend[i] == "-") && (children.Attend[i - 3] == "-"))
-                        {
+                        { children.Attend[i - 2] = "- GO TO NURSE";
+                            children.Attend[i - 1] = "- GO TO NURSE";
+                            children.Attend[i] = "- GO TO NURSE";
+                            children.Attend[i - 3] = "- GO TO NURSE";
                             children.needReceipt = true;
                             while (children.Attend[i] == "-")
                             {
+                                children.Attend[i] = "- GO TO NURSE";
                                 i++;
                             }
+                         
 
+                                children.needReceipt = ((new Random()).Next(2) == 0) ? true : false;
+                                children.Attend[i] =  "- GO TO NURSE";
+                                continue;
+                            
                         }
 
                     }
