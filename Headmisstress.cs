@@ -9,8 +9,11 @@ namespace LR62OP
         public static int cost = 500;
 
         public static List<int> Sum = new List<int>();
-
-
+        public static Collect<Child> ChildCollectMi;
+        public Headmisstress()
+        {
+            ChildCollectMi.InfoOnChildren = Child.MyBoys;
+        }
 
         public static void ReceiptForParents()
         {
@@ -18,7 +21,7 @@ namespace LR62OP
                 Console.WriteLine("Not enought days to calculate");
             else
             {
-                foreach (Child element in Child.MyBoys)
+                foreach (Child element in ChildCollectMi.InfoOnChildren)
                 {
                     int sum = 0;
                     bool pay = true;
