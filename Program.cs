@@ -11,9 +11,9 @@ namespace LR62OP
             Console.WriteLine("Отобразить информацию о детях, которым необходимо принести медицинскую справку.");
             Console.WriteLine("Kariavka Dariia, 10 variant, level B(C)");
             Console.WriteLine("Please Enter number of children");
-            int days = 15;//number of days in kindergarden
+            int days = 62;//number of days in kindergarden
             int ChildSize = 3;// Convert.ToInt32(Console.ReadLine());
-            Child[] children = new Child[ChildSize];//array of children
+      Child[] children = new Child[ChildSize];//array of children
 
             for (int i = 0; i < ChildSize; i++)
             { 

@@ -4,12 +4,14 @@ using System.Text;
 
 namespace LR62OP
 {
-    class Child
+    // List<T> Collection;
+
+    public class Child
     {
+        public static  List<Child> MyBoys { get;  set; } = new List<Child>();
 
         public int[] DayNumber;
         public string[] Attend;
-
 
         public Child(int days)
         {
@@ -27,16 +29,20 @@ namespace LR62OP
                 this.DayNumber[i] = i + 1;
                 this.Attend[i] = ChooseFrom[AttendBool];
             }
+            MyBoys.Add(this);
         }
+  
 
         public void Output(int days)
         {
             for (int i = 0; i < days; i++)
             {
-                Console.WriteLine("DAY " + DayNumber[i] + ":\t\t"+Attend[i]);
+                Console.WriteLine("DAY " + DayNumber[i] + ":\t\t" + Attend[i]);
             }
 
         }
 
+
+
+        }
     }
-}
