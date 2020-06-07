@@ -6,10 +6,15 @@ namespace LR62OP
 {
     public class Collect<T1>
     {
-        public List<List<T1>> InfoOnChildren { get; set; }
-        public Collect(List<List<T1>> Info)
+        public List<T1> InfoOnChildren { get; set; }
+        public Collect(List<T1> Info)
         {
             InfoOnChildren = Info;
+        }
+
+        public void Add(T1 name)
+        {
+            InfoOnChildren.Add(name);
         }
         public void ChooseIllChildren()
         {
