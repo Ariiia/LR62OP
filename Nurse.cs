@@ -7,10 +7,7 @@ namespace LR62OP
     public class Nurse
     {
 
-      public  Nurse( int days )
-        {
-           
-        }
+   
 
         public static void Check()
         {

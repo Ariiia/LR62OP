@@ -4,7 +4,19 @@ using System.Text;
 
 namespace LR62OP
 {
-    class Headmisstress
+ public   class Headmisstress
     {
+        public static int cost=;
+
+
+
+        public static void ReceiptForParents()
+        {
+            
+
+
+
+        }
+
     }
 }
