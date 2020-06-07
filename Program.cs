@@ -25,14 +25,14 @@ namespace LR62OP
             }
 
             //OUTPUT
-            //    Nurse Nurse = new Nurse(Child.MyBoys);
             for (int i = 0; i < ChildSize; i++)
             {
                 Console.WriteLine("\nChild #\t" + (i + 1) + ":\n");
                 children[i].Output(days);
 
             }
-
+            Nurse nurse = new Nurse();
+            Headmisstress headmisstress = new Headmisstress();
             Nurse.Check();
             Headmisstress.ReceiptForParents();
 

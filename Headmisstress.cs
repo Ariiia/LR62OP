@@ -9,7 +9,7 @@ namespace LR62OP
         public static int cost = 500;
 
         public static List<int> Sum = new List<int>();
-        public static Collect<Child> ChildCollectMi;
+        public static Collect<Child> ChildCollectMi=new Collect<Child>(Child.MyBoys);
         public Headmisstress()
         {
             ChildCollectMi.InfoOnChildren = Child.MyBoys;

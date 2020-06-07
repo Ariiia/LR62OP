@@ -6,12 +6,15 @@ namespace LR62OP
 {
     public class Nurse
     {
-
-
+        public static Collect<Child> ChildCollectNu =new Collect<Child>(Child.MyBoys);
+       public Nurse()
+        {
+            ChildCollectNu.InfoOnChildren = Child.MyBoys;
+        }
 
         public static void Check()
         {
-            if (Child.MyBoys.Count == 0)
+            if (ChildCollectNu.InfoOnChildren.Count == 0)
             {
                 Console.WriteLine("There are no children in the kindergarden");
 
