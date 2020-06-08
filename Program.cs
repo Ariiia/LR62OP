@@ -32,12 +32,13 @@ namespace LR62OP
                 children[i].Output(days);
 
             }
+            //CHILDREN AFTER HEADMISSTERESS AND NURSE
             Nurse nurse = new Nurse();
             Headmisstress headmisstress = new Headmisstress();
             Nurse.Check();
             Headmisstress.ReceiptForParents();
             Console.WriteLine("\nLIST OF PROCESSED CHILDREN\n");
-
+            //OUTPUT for sick children from collection
             for (int i = 0; i < ChildSize; i++)
             {
                 Console.WriteLine("\nChild #\t" + (i + 1) + ":\n");
