@@ -7,6 +7,7 @@ namespace LR62OP
     public class Nurse
     {
         public static Collect<Child> ChildCollectNu=new Collect<Child>();
+        public static Collect<Child> SickKidos = new Collect<Child>();
        public Nurse()
         {
             ChildCollectNu = Child.MyBoys;
@@ -64,8 +65,52 @@ namespace LR62OP
                     }
                 }
 
-            } 
-        }
+            }
 
+
+            foreach (Child child in ChildCollectNu)
+            {
+
+                SickKidos.Add(new Child());
+                for (int i = 0; i < Child.Days; i++)
+                {
+
+                    if (child.Attend[i].Contains("- GO TO NURSE TAKE RECEIPT"))
+                        SickKidos.InfoOnChildren[SickKidos.InfoOnChildren.Count - 1].Add(child.Attend[i]);
+                    else
+                    {
+                        SickKidos.InfoOnChildren[SickKidos.InfoOnChildren.Count - 1].Add(" ");
+                    }
+                }
+            }
+        }
+        public void Output(int days)
+        {
+            int temp = 0;
+            foreach (Child child in ChildCollectNu)
+            {
+               bool flag = false;
+                temp++;
+                
+                for(int j=0; j<days; j++)
+                {
+                    if (child.Attend[j].Contains("- GO TO NURSE TAKE RECEIPT")){
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag)
+                {
+                    Console.WriteLine("\nChild #\t" + (temp) + ":\n");
+
+                    for (int i = 0; i < days; i++)
+                    {
+                        if (child.Attend[i] == "- GO TO NURSE TAKE RECEIPT")
+                            Console.WriteLine("DAY " + (i + 1) + ":\t\t" + child.Attend[i]);
+                    }
+                }
+            }
+        }
     }
+
 }

@@ -19,6 +19,7 @@ namespace LR62OP
                 yield return InfoOnChildren[i];
             }
         }
+        
         public void Add(T1 name)
         {
             InfoOnChildren.Add(name);

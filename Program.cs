@@ -36,7 +36,7 @@ namespace LR62OP
             Headmisstress headmisstress = new Headmisstress();
             Nurse.Check();
             Headmisstress.ReceiptForParents();
-            Console.WriteLine("\nLIST OF CHILDREN\n");
+            Console.WriteLine("\nLIST OF PROCESSED CHILDREN\n");
 
             for (int i = 0; i < ChildSize; i++)
             {
@@ -44,7 +44,9 @@ namespace LR62OP
                 children[i].Output(days);
 
             }
+            Console.WriteLine("\nLIST OF SICK CHILDREN\n");
 
+            nurse.Output(days);
         }
     }
 }

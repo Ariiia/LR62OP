@@ -13,26 +13,32 @@ namespace LR62OP
         public static Collect<Child> MyBoys { get; set; } = new Collect<Child>();
         public static int Days;
         public int[] DayNumber;
-        public string[] Attend;
-
+        public List<string>Attend;
+        public Child() {
+            this.Attend = new List<string>();
+        }
         public Child(int days)
         {
             needReceipt = false;
             this.DayNumber = new int[days];
-            this.Attend = new string[days];
+            this.Attend = new List<string>();
             string[] ChooseFrom = { "+", "-" };
-            int AttendBool;
+            int AttendBool=0;
             Days = days;
             for (int i = 0; i < days; i++)
             {
                 AttendBool = ((new Random()).Next(ChooseFrom.Length));
 
                 this.DayNumber[i] = i + 1;
-                this.Attend[i] = ChooseFrom[AttendBool];
+                this.Attend.Add (ChooseFrom[AttendBool]);
             }
             MyBoys.Add(this);
         }
 
+        public void Add(string s)
+        {
+            Attend.Add(s);
+        }
         public void Output(int days)
         {
             for (int i = 0; i < days; i++)

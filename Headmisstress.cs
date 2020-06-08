@@ -10,6 +10,7 @@ namespace LR62OP
 
         public static List<int> Sum = new List<int>();
         public static Collect<Child> ChildCollectMi=new Collect<Child>();
+        public static Collect<Child> SickKidos = new Collect<Child>();
         public Headmisstress()
         {
             ChildCollectMi= Child.MyBoys;
@@ -18,7 +19,7 @@ namespace LR62OP
         public static void ReceiptForParents()
         {
             if (Child.Days < 30)
-                Console.WriteLine("Not enought days to calculate price");
+                Console.WriteLine("Not enough days to calculate price");
             else
             {
                 foreach (Child element in ChildCollectMi)
@@ -54,12 +55,23 @@ namespace LR62OP
                 }
 
             }
+            foreach(Child child in ChildCollectMi)
+            {
+
+                SickKidos.Add(new Child());
+                for (int i = 0; i < Child.Days; i++)
+                {
+
+                    if(child.Attend[i].Contains("- PAY DEBTS FOR YOUR CHILD"))
+                        SickKidos.InfoOnChildren[SickKidos.InfoOnChildren.Count - 1].Add(child.Attend[i]);
+                    else {  
+                    SickKidos.InfoOnChildren[SickKidos.InfoOnChildren.Count - 1].Add(" ");
+                    }
+                }
+            }
+
         }
 
        
-
-
-
-        
     }
 }
